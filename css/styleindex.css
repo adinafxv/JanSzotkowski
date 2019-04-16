@@ -13,7 +13,7 @@ header{
 }
 
 .logo {
-  line-height: 60px;
+  line-height: 60px; // je prakticke line-height definovat ve vztahu k font-size. Staci napsat nasobek bez jednotky ‘line-height: 3;`
   position: fixed;
   float: left;
   margin: 16px 46px;
@@ -35,7 +35,7 @@ nav ul{
   color: #fff;
   padding: 1% 0%;
   text-align: center;
-  transition: 1s;
+  transition: 1s; // vzdy je dobre nadefinovat, ktere vlastnosti se transition tyka. (color, width, whatever)
 
 }
 
@@ -47,7 +47,7 @@ nav ul li {
   display: inline-block;
 }
 
-nav ul li a {
+nav ul li a { // mozna zbytecne silny selector.
   text-decoration: none;
   color: #fff;
   font-size: 20px;
@@ -65,7 +65,7 @@ nav ul li a {
   display: none;
 }
 
-@media(max-width: 786px) {
+@media(max-width: 786px) { // idealne mobile first
 
       .logo {
         position: fixed;
@@ -154,7 +154,9 @@ nav ul li a {
   margin: 5%;
 }
 
-.closebtn {
+.closebtn { // vyberte si konvenci na naming. Camel case, snake case, kebab case? 
+            //  (https://chaseonsoftware.com/most-common-programming-case-types/)
+            //  + doprucuji procist neco o bem 
   border-bottom: 0px;
 }
 
@@ -178,12 +180,12 @@ nav ul li a {
   }
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 450px) { // velmi dobre! doporucuji vsude psat spravny tvar @media screen and ... 
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
 
-.cool-link::after {
+.cool-link::after { // dve dvojtecky, chvalim. doporucuji uchovat potom i v preprocessorech pro prehlednost
   content: '';
   display: block;
   width: 0;
@@ -248,7 +250,7 @@ header .citacion {
 .pimg3 {
   background-color: #1C1C1C;
   color: white;
-  padding: 7% 0% 0% 0%;
+  padding: 7% 0% 0% 0%; // mozna bych radsi pouzila rem nez %, at nema obsah az tak dynamicky prostor
 }
 
 .section {
@@ -291,7 +293,7 @@ header .citacion {
 
 .image {
   opacity: 1;
-  transition: .5s ease;
+  transition: .5s ease; 
   backface-visibility: hidden;
 }
 
@@ -387,7 +389,7 @@ header .citacion {
   color: white;
 }
 
-#css-table .colms{
+#css-table .colms{ 
   display: table-cell;
   vertical-align: top;
   text-align: center;
